@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="zh-TW">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>工程資料分享系統</title>
 
     <!-- Bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet" />
 
     <style>
         body {
@@ -54,13 +54,13 @@
             border-radius: 12px;
             padding: 15px;
             margin-bottom: 10px;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
             transition: 0.2s;
         }
         body.dark .item-card {
             background: #2a2a2a;
             color: #eee;
-            box-shadow: 0 2px 6px rgba(255,255,255,0.1);
+            box-shadow: 0 2px 6px rgba(255, 255, 255, 0.1);
         }
 
         .item-card:hover {
@@ -79,16 +79,13 @@
 </head>
 
 <body>
-
     <!-- 側邊選單 -->
     <div class="sidebar" id="sidebar">
         <h4><i class="bi bi-folder2-open"></i> 工程系統</h4>
         <a href="#formSection"><i class="bi bi-file-earmark-text"></i> 表單類</a>
-        <a href="#photoSection"><i class="bi bi-image"></i> 照片類</a>
-        <a href="#docSection"><i class="bi bi-file-pdf"></i> PDF/簡報</a>
-        <a href="#recordSection"><i class="bi bi-journal-text"></i> 工程紀錄</a>
-        <a href="#linkSection"><i class="bi bi-link-45deg"></i> 系統連結</a>
-        <hr>
+        <a href="#templateSection"><i class="bi bi-file-earmark-text"></i> 文範本系統</a>
+        <a href="#linkSection"><i class="bi bi-link-45deg"></i> 常用連結</a>
+        <hr />
         <button class="btn btn-sm btn-light" id="darkToggle"><i class="bi bi-moon"></i> 深色模式</button>
     </div>
 
@@ -97,47 +94,53 @@
         <h2><i class="bi bi-collection"></i> 工程資料分享系統</h2>
 
         <!-- 搜尋框 -->
-        <input id="searchInput" type="text" class="form-control search-box mb-3" placeholder="搜尋資料...">
+        <input
+            id="searchInput"
+            type="text"
+            class="form-control search-box mb-3"
+            placeholder="搜尋資料..."
+        />
 
         <!-- 表單類 -->
         <h4 id="formSection" class="mt-4">📁 表單類</h4>
         <div class="item-card searchable">
             <i class="bi bi-file-earmark-text icon"></i>
-            <a href="https://docs.google.com/document/d/1ioQovWLkt6tmxL_zc-bOryDxMrXxnXCi/export?format=doc" target="_blank">土地同意書</a>
+            <a href="https://docs.google.com/document/d/1ioQovWLkt6tmxL_zc-bOryDxMrXxnXCi/export?format=doc" target="_blank"
+                >土地同意書</a
+            >
         </div>
         <div class="item-card searchable">
             <i class="bi bi-file-earmark-text icon"></i>
-        <a href="https://docs.google.com/document/d/1LBIZfibSu8iAR_1NyayUEo5Es12T3kXe/export?format=doc" target="_blank">連署申請</a>
+            <a href="https://docs.google.com/document/d/1LBIZfibSu8iAR_1NyayUEo5Es12T3kXe/export?format=doc" target="_blank"
+                >連署申請</a
+            >
         </div>
         <div class="item-card searchable">
             <i class="bi bi-file-earmark-text icon"></i>
-         <a href="https://docs.google.com/document/d/1LPBZOySF8HJnQYmv1mLbuPP6LfXGeGev/export?format=doc" target="_blank">雲林縣巷道認定申請書</a>
+            <a href="https://docs.google.com/document/d/1LPBZOySF8HJnQYmv1mLbuPP6LfXGeGev/export?format=doc" target="_blank"
+                >雲林縣巷道認定申請書</a
+            >
         </div>
 
-        <!-- 新增分類：照片 -->
-        <h4 id="photoSection" class="mt-4">🖼️ 照片類</h4>
-        <div class="item-card searchable">（尚未加入任何照片）</div>
+        <!-- 文範本系統 -->
+        <h4 id="templateSection" class="mt-4">📝 文範本系統</h4>
+        <div class="item-card searchable">
+            <i class="bi bi-file-earmark-text icon"></i>
+            <a href="https://github.com/pctest530/cswork/blob/main/template.html" target="_blank">GitHub 範本頁面</a>
+        </div>
 
-        <!-- 新增分類：PDF/簡報 -->
-        <h4 id="docSection" class="mt-4">📄 PDF / 簡報</h4>
-        <div class="item-card searchable">（尚未加入任何 PDF 或簡報）</div>
-
-        <!-- 新增分類：工程紀錄 -->
-        <h4 id="recordSection" class="mt-4">📘 工程紀錄</h4>
-        <div class="item-card searchable">（尚未加入工程紀錄）</div>
-
-        <!-- 系統連結 -->
-        <h4 id="linkSection" class="mt-4">🔗 系統連結</h4>
+        <!-- 常用連結 -->
+        <h4 id="linkSection" class="mt-4">🔗 常用連結</h4>
         <div class="item-card searchable">
             <i class="bi bi-globe icon"></i>
             <a href="https://pwd.yunlin.gov.tw/YLRoad/Account/Login" target="_blank">道路挖掘管理系統</a>
         </div>
-
+        <!-- 你可以依需求在這邊新增更多連結 -->
     </div>
 
     <!-- JS -->
     <script>
-        // 深色模式
+        // 深色模式切換
         document.getElementById("darkToggle").onclick = function () {
             document.body.classList.toggle("dark");
             document.getElementById("sidebar").classList.toggle("dark");
@@ -148,7 +151,7 @@
             let keyword = this.value.toLowerCase();
             let cards = document.querySelectorAll(".searchable");
 
-            cards.forEach(card => {
+            cards.forEach((card) => {
                 let text = card.innerText.toLowerCase();
                 card.style.display = text.includes(keyword) ? "block" : "none";
             });
